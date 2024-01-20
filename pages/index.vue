@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>Page: Index5</div>
+  <h1>首頁</h1>
 </template>
 
 <style scoped></style>
