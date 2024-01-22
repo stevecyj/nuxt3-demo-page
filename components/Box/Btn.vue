@@ -1,9 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <h1>首頁</h1>
-  <Home />
-  <Box />
+  <button>Click</button>
 </template>
 
 <style scoped></style>
