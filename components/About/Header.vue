@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <AboutHeader />
-  <h1>about</h1>
-  <AboutFooter />
+  <div>
+    <h1>about Header</h1>
+  </div>
 </template>
 
 <style scoped></style>
