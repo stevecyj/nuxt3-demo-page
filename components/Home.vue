@@ -1,8 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <h1>首頁</h1>
-  <Home />
+  <div>
+    Component: Home
+  </div>
 </template>
 
 <style scoped></style>
