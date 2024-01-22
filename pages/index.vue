@@ -1,7 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { count, addCount } = useAddCount()
+</script>
 
 <template>
-  <h1>首頁</h1>
+  <h1>首頁: {{ count }}</h1>
+  <button @click="addCount">add</button>
   <Home />
   <Box />
 </template>
