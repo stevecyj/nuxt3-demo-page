@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Btn from "@theme/Btn.vue"
 // const { count, addCount } = useAddCount()
 
 const { $hello } = useNuxtApp()
@@ -10,6 +11,7 @@ const store = useHomeStore()
   <h1>首頁: {{ store.count }}</h1>
   <h2>{{ $hello("Dio") }}</h2>
   <button @click="store.addCount">add</button>
+  <Btn />
   <Home />
   <Box />
 </template>
