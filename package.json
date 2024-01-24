@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "theme": "./tools/theme/config.sh $THEME",
     "build": "nuxt build",
-    "dev": "nuxt dev --open",
+    "dev": "npm run theme && nuxt dev --open",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
