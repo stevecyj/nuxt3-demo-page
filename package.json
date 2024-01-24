@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "theme": "./tools/theme/config.sh $THEME",
-    "build": "nuxt build",
+    "build": "npm run theme && nuxt build",
     "dev": "npm run theme && nuxt dev --open",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
