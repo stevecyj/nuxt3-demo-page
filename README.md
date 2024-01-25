@@ -1,5 +1,27 @@
 # Nuxt 3 Minimal Starter
 
+## 切換模版
+
+### 啟動多模版
+
+啟動 10 模版，默認 port 3000
+
+```jsx
+npm run dev
+```
+
+#### mac、linux啟動 11 模版( linux port 待測試)
+
+```jsx
+export PORT=8000 && THEME=11 npm run dev
+```
+
+#### window 啟動 11 模版( port 待測試) ###
+
+```jsx
+set PORT=8000 && THEME=11 npm run dev
+```
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
