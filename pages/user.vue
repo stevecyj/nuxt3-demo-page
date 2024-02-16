@@ -1,13 +1,12 @@
 <script lang="ts" setup>
 definePageMeta({
-  middleware: (to, from) => {
-    console.log("user =====> ", { to, from })
-  },
+  middleware: ["auth"],
 })
 </script>
 
 <template>
   <div>
+    <nuxt-link to="/">home</nuxt-link>
     <h1>user</h1>
   </div>
 </template>
