@@ -10,6 +10,7 @@ const store = useHomeStore()
 <template>
   <h1>首頁: {{ store.count }}</h1>
   <h2>{{ $hello("Dio") }}</h2>
+  <h2 v-timeformat="1708066023624"></h2>
   <button @click="store.addCount">add</button>
   <Btn @click="store.addCount" />
   <Home />
