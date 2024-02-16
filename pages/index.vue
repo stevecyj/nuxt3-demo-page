@@ -10,6 +10,7 @@ const selectedDate = ref(new Date())
 </script>
 
 <template>
+  <nuxt-link to="/user">user</nuxt-link>
   <h1>首頁: {{ store.count }}</h1>
   <h2>{{ $hello("Dio") }}</h2>
   <h2 v-timeformat="1708066023624"></h2>
