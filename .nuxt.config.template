@@ -1,7 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/scss/main.scss'],
+  app: {
+    head: {
+      viewport: "width=500, initial-scale=1",
+      title: "国民女神李若宁 宅男女神张云畅",
+      meta: [
+        {
+          name: "description",
+          content: "国民女神李若宁 宅男女神张云畅",
+        },
+        { property: "og:title", content: "国民女神李若宁 宅男女神张云畅" },
+        { property: "og:url", content: "http://localhost:3000/" },
+        {
+          property: "og:description",
+          content: "国民女神李若宁 宅男女神张云畅",
+        },
+      ],
+    },
+  },
+  css: ["~/assets/scss/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -21,4 +39,4 @@ export default defineNuxtConfig({
   },
   modules: ["@pinia/nuxt"],
   alias: { "@theme": "../${theme}" },
-})
+});
