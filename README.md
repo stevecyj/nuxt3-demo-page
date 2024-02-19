@@ -28,6 +28,10 @@ set PORT=8000 && THEME=11 npm run dev
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+### nuxt.config.ts
+
+🎉 設定檔由 `.nuxt.config.template` 修改
+
 ## Setup
 
 Make sure to install the dependencies:
