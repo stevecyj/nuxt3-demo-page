@@ -21,18 +21,23 @@ const getApiData = async () => {
 </script>
 
 <template>
-  <nuxt-link to="/user">user</nuxt-link>
-  <h1>首頁: {{ store.count }}</h1>
-  <button @click="getApiData">get api data</button>
-  <h2>{{ $hello("Dio") }}</h2>
-  <h2 v-timeformat="1708066023624"></h2>
-  <VDatePicker v-model="selectedDate" />
-  <br />
-  <button @click="store.addCount">add</button>
-  <Btn @click="store.addCount" />
-  <Home />
-  <Box />
-  <h1 class="text-3xl text-blue-500 font-bold underline">Hello world!</h1>
+  <div class="flex flex-col items-start ml-16">
+    <div class="flex">
+      <nuxt-link class="mr-5 text-blue-500" to="/user">user</nuxt-link>
+      <nuxt-link class="mr-5 text-blue-500" to="/about">about</nuxt-link>
+    </div>
+    <h1>首頁: {{ store.count }}</h1>
+    <button @click="getApiData">get api data</button>
+    <h2>{{ $hello("Dio") }}</h2>
+    <h2 v-timeformat="1708066023624"></h2>
+    <VDatePicker v-model="selectedDate" />
+    <br />
+    <button @click="store.addCount">add</button>
+    <Btn @click="store.addCount" />
+    <Home />
+    <Box />
+    <h1 class="text-3xl text-blue-500 font-bold underline">Hello world!</h1>
+  </div>
 </template>
 
 <style scoped></style>

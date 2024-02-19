@@ -1,6 +1,17 @@
 <script lang="ts" setup>
-import AboutHeader from "@/components/About/Header.vue"
-import AboutFooter from "@/components/About/Footer.vue"
+useHead({
+  title: "關於我們 金龍呈祥 福滿金沙",
+  meta: [
+    { property: "og:title", content: "關於我們 金龍呈祥 福滿金沙" },
+    { property: "og:url", content: "http://localhost:3000/about" },
+    { property: "og:image", content: "http://localhost:3000/share.jpg" },
+    { name: "description", content: "關於我們 金龍呈祥 福滿金沙" },
+    {
+      property: "og:description",
+      content: "關於我們 金龍呈祥 福滿金沙",
+    },
+  ],
+})
 </script>
 
 <template>

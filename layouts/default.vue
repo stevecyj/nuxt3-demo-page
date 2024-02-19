@@ -3,7 +3,10 @@
 <template>
   <div>
     Layout: default
-    <header>layout header</header>
+    <header>
+      layout header
+      <nuxt-link class="text-blue-500" to="/">Home</nuxt-link>
+    </header>
     <slot />
     <footer>layout footer</footer>
   </div>
