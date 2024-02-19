@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   components: {
     dirs: [
       {
@@ -13,5 +19,5 @@ export default defineNuxtConfig({
     dirs: ["stores"],
   },
   modules: ["@pinia/nuxt"],
-  alias: { "@theme": "../themes/11" },
+  alias: { "@theme": "../themes/10" },
 })
