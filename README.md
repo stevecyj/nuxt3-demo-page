@@ -1,5 +1,9 @@
 # Nuxt 3 Minimal Starter
 
+## node version
+
+- node v20.11.0
+
 ## 切換模版
 
 ### 啟動多模版
