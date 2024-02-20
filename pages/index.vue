@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Btn from "@theme/Btn.vue"
 // const { count, addCount } = useAddCount()
+const { data } = await useFetch("https://opentdb.com/api.php?amount=3")
 
 const { $hello } = useNuxtApp()
 
@@ -27,6 +28,7 @@ const getApiData = async () => {
       <nuxt-link class="mr-5 text-blue-500" to="/about">about</nuxt-link>
     </div>
     <h1>首頁: {{ store.count }}</h1>
+    <div class="w-6/12">{{ data }}<br /></div>
     <button @click="getApiData">get api data</button>
     <h2>{{ $hello("Dio") }}</h2>
     <h2 v-timeformat="1708066023624"></h2>
