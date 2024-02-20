@@ -2,12 +2,31 @@
 definePageMeta({
   middleware: ["auth"],
 })
+
+const { data } = await useFetch("/api/user", {
+  pick: ["title", "description", "ogImage"],
+})
+const title = data.value?.title
+const description = data.value?.description
+
+console.log(data.value)
 </script>
 
 <template>
+  <Head>
+    <Title>{{ title }}</Title>
+    <Meta name="description" :content="description" />
+    <Link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </Head>
   <div>
     <nuxt-link to="/">home</nuxt-link>
     <h1>user</h1>
+    <h2>
+      {{ title }}
+    </h2>
   </div>
 </template>
 
