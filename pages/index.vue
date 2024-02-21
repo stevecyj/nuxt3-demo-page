@@ -1,11 +1,16 @@
 <script lang="ts" setup>
 import Btn from "@theme/Btn.vue"
+// addCount 改從 store 取得
 // const { count, addCount } = useAddCount()
+
+const { uuid } = useUUID()
+console.log("uuid", uuid())
+
 const { data } = await useFetch("https://opentdb.com/api.php", {
   query: { amount: 3 },
 })
-console.log((data.value as { results: any[] }).results.length)
-const itemCount = (data.value as { results: any[] }).results.length
+console.log((data.value as { results: any[] })?.results.length)
+const itemCount = (data.value as { results: any[] })?.results.length
 
 const { $hello } = useNuxtApp()
 
