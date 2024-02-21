@@ -40,6 +40,9 @@ const getApiData = async () => {
     <div class="flex">
       <nuxt-link class="mr-5 text-blue-500" to="/user">user</nuxt-link>
       <nuxt-link class="mr-5 text-blue-500" to="/about">about</nuxt-link>
+      <nuxt-link class="mr-5 text-blue-500" to="/async-data"
+        >async data</nuxt-link
+      >
     </div>
     <h1>首頁: {{ store.count }}</h1>
     <div class="w-6/12" v-if="pending">Loading ...</div>
