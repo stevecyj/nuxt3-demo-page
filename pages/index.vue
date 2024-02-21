@@ -8,9 +8,13 @@ console.log("uuid", uuid())
 
 const { data } = await useFetch("https://opentdb.com/api.php", {
   query: { amount: 3 },
+  server: false,
 })
 console.log((data.value as { results: any[] })?.results.length)
-const itemCount = (data.value as { results: any[] })?.results.length
+// const itemCount = (data.value as { results: any[] })?.results.length
+const itemCount = computed(
+  () => (data.value as { results: any[] })?.results.length
+)
 
 const { $hello } = useNuxtApp()
 
@@ -38,7 +42,9 @@ const getApiData = async () => {
     </div>
     <h1>首頁: {{ store.count }}</h1>
     <div class="w-6/12">
-      {{ data }}<br /><span>data counts: {{ itemCount }}</span>
+      {{ data }}<br /><span
+        >data counts: <span class="text-blue-500">{{ itemCount }}</span></span
+      >
     </div>
     <button @click="getApiData">get api data</button>
     <h2>{{ $hello("Dio") }}</h2>
