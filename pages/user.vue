@@ -5,6 +5,11 @@ definePageMeta({
 
 const { data } = await useFetch("/api/user", {
   pick: ["title", "description", "ogImage"],
+  onRequest({ request, options }) {
+    // 設置 request headers
+    options.headers = {} as { [key: string]: string }
+    options.headers.authorization = `Bearer token-your-token`
+  },
 })
 const title = data.value?.title
 const description = data.value?.description
