@@ -6,9 +6,10 @@ import Btn from "@theme/Btn.vue"
 const { uuid } = useUUID()
 console.log("uuid", uuid())
 
-const { data } = await useFetch("https://opentdb.com/api.php", {
+const { data, pending, error } = await useFetch("https://opentdb.com/api.php", {
   query: { amount: 3 },
-  server: false,
+  key: "trivia",
+  lazy: true,
 })
 console.log((data.value as { results: any[] })?.results.length)
 // const itemCount = (data.value as { results: any[] })?.results.length
@@ -41,7 +42,9 @@ const getApiData = async () => {
       <nuxt-link class="mr-5 text-blue-500" to="/about">about</nuxt-link>
     </div>
     <h1>首頁: {{ store.count }}</h1>
-    <div class="w-6/12">
+    <div class="w-6/12" v-if="pending">Loading ...</div>
+    <div v-else-if="error" class="text-red-300">{{ error.message }}</div>
+    <div class="w-6/12" v-else>
       {{ data }}<br /><span
         >data counts: <span class="text-blue-500">{{ itemCount }}</span></span
       >
