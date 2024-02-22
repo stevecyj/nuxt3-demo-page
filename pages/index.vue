@@ -46,6 +46,7 @@ const getApiData = async () => {
       <nuxt-link class="mr-5 text-blue-500" to="/many-fetch"
         >many fetch</nuxt-link
       >
+      <nuxt-link class="mr-5 text-blue-500" to="/tailwind">tailwind</nuxt-link>
     </div>
     <h1>首頁: {{ store.count }}</h1>
     <div class="w-6/12" v-if="pending">Loading ...</div>
