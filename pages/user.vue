@@ -10,6 +10,10 @@ const { data } = await useFetch("/api/user", {
     options.headers = {} as { [key: string]: string }
     options.headers.authorization = `Bearer token-your-token`
   },
+  onResponse({ request, response, options }) {
+    response._data.success = true
+    console.log("response", response)
+  },
 })
 const title = data.value?.title
 const description = data.value?.description
