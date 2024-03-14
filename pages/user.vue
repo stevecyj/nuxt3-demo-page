@@ -31,7 +31,7 @@ console.log(data.value)
     />
   </Head>
   <div>
-    <nuxt-link to="/">home</nuxt-link>
+    <NuxtLink to="/">home</NuxtLink>
     <h1>user</h1>
     <h2>
       {{ title }}

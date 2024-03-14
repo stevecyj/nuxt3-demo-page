@@ -7,7 +7,7 @@ import "virtual:svg-icons-register"
     Layout: default
     <header>
       layout header
-      <nuxt-link class="text-blue-500" to="/">Home</nuxt-link>
+      <NuxtLink class="text-blue-500" to="/">Home</NuxtLink>
     </header>
     <slot />
     <footer>layout footer</footer>

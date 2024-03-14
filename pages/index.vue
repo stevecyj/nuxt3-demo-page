@@ -38,15 +38,20 @@ const getApiData = async () => {
 <template>
   <div class="flex flex-col items-start ml-16">
     <div class="flex">
-      <nuxt-link class="mr-5 text-blue-500" to="/user">user</nuxt-link>
-      <nuxt-link class="mr-5 text-blue-500" to="/about">about</nuxt-link>
-      <nuxt-link class="mr-5 text-blue-500" to="/async-data"
-        >async data</nuxt-link
+      <NuxtLink class="mr-5 text-blue-500" to="/user">user</NuxtLink>
+      <NuxtLink class="mr-5 text-blue-500" to="/about" target="_blank"
+        >about</NuxtLink
       >
-      <nuxt-link class="mr-5 text-blue-500" to="/many-fetch"
-        >many fetch</nuxt-link
+      <NuxtLink class="mr-5 text-blue-500" to="/about" target="_blank"
+        >google</NuxtLink
       >
-      <nuxt-link class="mr-5 text-blue-500" to="/tailwind">tailwind</nuxt-link>
+      <NuxtLink class="mr-5 text-blue-500" to="/async-data"
+        >async data</NuxtLink
+      >
+      <NuxtLink class="mr-5 text-blue-500" to="/many-fetch"
+        >many fetch</NuxtLink
+      >
+      <NuxtLink class="mr-5 text-blue-500" to="/tailwind">tailwind</NuxtLink>
     </div>
     <h1>首頁: {{ store.count }}</h1>
     <div class="w-6/12" v-if="pending">Loading ...</div>
