@@ -42,7 +42,11 @@ const getApiData = async () => {
       <NuxtLink class="mr-5 text-blue-500" to="/about" target="_blank"
         >about</NuxtLink
       >
-      <NuxtLink class="mr-5 text-blue-500" to="/about" target="_blank"
+      <NuxtLink
+        class="mr-5 text-blue-500"
+        to="https://google.com"
+        target="_blank"
+        external
         >google</NuxtLink
       >
       <NuxtLink class="mr-5 text-blue-500" to="/async-data"
