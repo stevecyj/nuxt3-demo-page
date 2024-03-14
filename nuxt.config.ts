@@ -52,4 +52,7 @@ export default defineNuxtConfig({
   },
   modules: ["@pinia/nuxt"],
   alias: { "@theme": "../themes/10" },
+  devServer: {
+    port: 3001,
+  },
 });
