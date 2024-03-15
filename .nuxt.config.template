@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       ],
   },
 
-  css: ["~/assets/scss/main.scss"],
+  css: ["~/assets/scss/main.scss", "~/assets/scss/gsap.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -43,6 +43,10 @@ export default defineNuxtConfig({
     dirs: [
       {
         path: "~/components/global",
+        global: true,
+      },
+      {
+        path: "~/components/GSAP",
         global: true,
       },
     ],
