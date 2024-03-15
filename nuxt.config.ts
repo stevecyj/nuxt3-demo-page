@@ -55,7 +55,10 @@ export default defineNuxtConfig({
     dirs: ["stores"],
   },
   modules: ["@pinia/nuxt"],
-  alias: { "@theme": "../themes/10" },
+  alias: {
+    "@theme": "../themes/10",
+    "@helpers": "../helpers"
+  },
   devServer: {
     port: 3001,
   },

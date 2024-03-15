@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
 
+:root {
+  --dark: #1d1d1d;
+  --grey-dark: #414141;
+  --light: #fff;
+  --mid: #ededed;
+  --grey: #989898;
+  --gray: #989898;
+  --green: #28a92b;
+  --green-dark: #4e9815;
+  --green-light: #6fb936;
+  --blue: #2c7ad2;
+  --purple: #8d3dae;
+  --red: #c82736;
+  --orange: #e77614;
+  accent-color: var(--green);
+}
+
 .gsap-section {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  :root {
-    --dark: #1d1d1d;
-    --grey-dark: #414141;
-    --light: #fff;
-    --mid: #ededed;
-    --grey: #989898;
-    --gray: #989898;
-    --green: #28a92b;
-    --green-dark: #4e9815;
-    --green-light: #6fb936;
-    --blue: #2c7ad2;
-    --purple: #8d3dae;
-    --red: #c82736;
-    --orange: #e77614;
-    accent-color: var(--green);
   }
 
   /* colors */
@@ -493,14 +493,15 @@
     text-decoration: none;
   }
 
-  html,
-  body {
-    margin: 0;
-    height: 100%;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-    font-family: "Signika Negative", sans-serif, Arial;
-  }
+  // 移到 boxes-container
+  // html,
+  // body {
+  //   margin: 0;
+  //   height: 100%;
+  //   -webkit-overflow-scrolling: touch;
+  //   overflow-scrolling: touch;
+  //   font-family: "Signika Negative", sans-serif, Arial;
+  // }
 
   .panel {
     width: 100%;
@@ -662,6 +663,10 @@
   }
 
   .boxes-container {
+    height: auto;
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: "Signika Negative", sans-serif;
     width: 100%;
     height: 100vh;
     display: flex;
