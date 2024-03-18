@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import "virtual:svg-icons-register"
 
+// gsap
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 //  useRoute & useRouter
 // const route = useRoute()
 // const { fullPath, hash, matched, meta, name, path, redirectedFrom } = route

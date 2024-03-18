@@ -1,4 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { toggleTransitionComplete } = useTransition()
+onMounted(() => {
+  toggleTransitionComplete(true)
+})
+</script>
 
 <template>
   <div class="gsap-section">
