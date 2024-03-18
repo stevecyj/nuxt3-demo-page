@@ -3,12 +3,16 @@ import gsap from "gsap"
 import transitionConfig from "@helpers/transitionConfig"
 
 const main = ref()
-let tl
+let tl: gsap.core.Timeline
 let ctx: gsap.Context
 
 definePageMeta({
   pageTransition: transitionConfig,
 })
+
+const toggleTimeline = () => {
+  tl.reversed(!tl.reversed())
+}
 
 onMounted(() => {
   ctx = gsap.context((self) => {
@@ -31,7 +35,7 @@ onUnmounted(() => {
   <section class="boxes-container" ref="main">
     <h1>Use the button to toggle a Timeline</h1>
     <div>
-      <button @click="">Toggle Timeline</button>
+      <button @click="toggleTimeline">Toggle Timeline</button>
     </div>
     <div class="box">Box 1</div>
     <div class="box">Box 2</div>
