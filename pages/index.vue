@@ -39,9 +39,7 @@ const getApiData = async () => {
   <div class="flex flex-col items-start ml-16">
     <div class="flex">
       <NuxtLink class="mr-5 text-blue-500" to="/user">user</NuxtLink>
-      <NuxtLink class="mr-5 text-blue-500" to="/about" target="_blank"
-        >about</NuxtLink
-      >
+      <NuxtLink class="mr-5 text-blue-500" to="/about">about</NuxtLink>
       <NuxtLink
         class="mr-5 text-blue-500"
         to="https://google.com"
