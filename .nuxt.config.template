@@ -22,14 +22,19 @@ export default defineNuxtConfig({
       ],
     },
   },
-    "vite": {
-      plugins: [
-        createSvgIconsPlugin({
-          iconDirs: [path.resolve(process.cwd(), 'assets/icons')],
-          symbolId: 'icon-[dir]-[name]',
-          customDomId: '__svg__icons__dom__',
-        }),
-      ],
+  vite: {
+    plugins: [
+      createSvgIconsPlugin({
+        iconDirs: [path.resolve(process.cwd(), 'assets/icons')],
+        symbolId: 'icon-[dir]-[name]',
+        customDomId: '__svg__icons__dom__',
+      }),
+    ],
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => ['h1'].some(substring => tag.includes(substring)),
+    },
   },
 
   css: ["~/assets/scss/main.scss", "~/assets/scss/gsap.scss"],
