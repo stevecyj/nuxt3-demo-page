@@ -26,13 +26,29 @@ const router = useRouter()
 const goBack = () => {
   router.go(-1)
 }
+
+// hook
+const nuxtApp = useNuxtApp()
+const isLoading = ref(false)
+nuxtApp.hook("page:start", () => {
+  isLoading.value = true
+  console.log("isLoading: ", isLoading.value)
+})
+nuxtApp.hook("page:finish", () => {
+  setTimeout(() => {
+    isLoading.value = false
+  }, 2000)
+  console.log("isLoading: ", isLoading.value)
+})
 </script>
 
 <template>
   <div>
-    <NuxtLoadingIndicator color="#f00" :height="10" :throttle="0">
+    <!-- <NuxtLoadingIndicator color="#f00" :height="10" :throttle="0">
       <p>Loading...</p>
-    </NuxtLoadingIndicator>
+    </NuxtLoadingIndicator> -->
+    <!-- custom loading -->
+    <h1 class="text-blue-500" v-show="isLoading">Loading</h1>
     Layout: default
     <header>
       layout header
