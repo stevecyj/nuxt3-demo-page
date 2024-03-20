@@ -6,5 +6,14 @@ export const useVoteStore = defineStore("vote", () => {
     voteData.value = data
     console.log("voteData: ", data)
   }
-  return { voteData, setVoteData }
+
+  const addVote = async (type: string) => {
+    const data = await $fetch("https://vue-lessons-api.vercel.app/vote/add", {
+      method: "POST",
+      body: { type },
+    })
+    voteData.value = data as {}
+    console.log("addVote =====> ", data)
+  }
+  return { voteData, setVoteData, addVote }
 })
