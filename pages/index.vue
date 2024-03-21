@@ -33,6 +33,14 @@ const getApiData = async () => {
       console.log(err)
     })
 }
+
+// env
+const config = useRuntimeConfig()
+console.log("client config: ", config.public)
+
+if (process.server) {
+  console.log("server token: ", config.token)
+}
 </script>
 
 <template>

@@ -68,4 +68,10 @@ export default defineNuxtConfig({
   devServer: {
     port: 3001,
   },
+  "runtimeConfig": {
+    "token": '',
+    "public": {
+      "apiUrl": '',
+    }
+  },
 });
