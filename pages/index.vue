@@ -35,12 +35,17 @@ const getApiData = async () => {
 }
 
 // env
-const config = useRuntimeConfig()
-console.log("client config: ", config.public)
+//const config = useRuntimeConfig()
+//console.log("client config: ", config.public)
 
-if (process.server) {
-  console.log("server token: ", config.token)
-}
+//if (process.server) {
+//console.log("server token: ", config.token)
+//}
+
+// vite env
+console.log("ENV =====> ", process.env.ENV)
+console.log("WEB_URL =====> ", process.env.WEB_URL)
+console.log("process =====> ", process)
 </script>
 
 <template>

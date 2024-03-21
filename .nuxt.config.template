@@ -30,6 +30,9 @@ export default defineNuxtConfig({
         customDomId: '__svg__icons__dom__',
       }),
     ],
+    define: {
+      'process.env': process.env,
+    },
   },
   vue: {
     compilerOptions: {
@@ -68,10 +71,10 @@ export default defineNuxtConfig({
   devServer: {
     port: 3001,
   },
-  "runtimeConfig": {
-    "token": '',
-    "public": {
-      "apiUrl": '',
-    }
-  },
+  //"runtimeConfig": {
+    //"token": '',
+    //"public": {
+      //"apiUrl": '',
+    //}
+  //},
 });
