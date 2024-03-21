@@ -70,6 +70,10 @@ export default defineNuxtConfig({
   },
   devServer: {
     port: 3001,
+    //https: {
+      //key: './https/localhost+3-key.pem',
+      //cert: './https/localhost+3.pem'
+    //}
   },
   //"runtimeConfig": {
     //"token": '',
