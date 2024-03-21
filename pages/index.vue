@@ -45,7 +45,13 @@ const getApiData = async () => {
 // vite env
 console.log("ENV =====> ", process.env.ENV)
 console.log("WEB_URL =====> ", process.env.WEB_URL)
-console.log("process =====> ", process.env)
+// console.log("process =====> ", process.env)
+
+// 加油站
+onMounted(async () => {
+  const response = await $fetch("/openData/5typeservicestn")
+  console.log("加油站 =====> ", response)
+})
 </script>
 
 <template>

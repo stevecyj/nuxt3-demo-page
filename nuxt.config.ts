@@ -33,6 +33,14 @@ export default defineNuxtConfig({
     define: {
       'process.env': process.env,
     },
+    server: {
+      "proxy": {
+        '/openData': {
+          "target": 'https://vipmbr.cpc.com.tw/',
+          "changeOrigin": true,
+        },
+      },
+    },
   },
   vue: {
     compilerOptions: {
@@ -70,10 +78,10 @@ export default defineNuxtConfig({
   },
   devServer: {
     port: 3001,
-    //https: {
-      //key: './https/localhost+3-key.pem',
-      //cert: './https/localhost+3.pem'
-    //}
+    https: {
+      key: './https/localhost+3-key.pem',
+      cert: './https/localhost+3.pem'
+    }
   },
   //"runtimeConfig": {
     //"token": '',
