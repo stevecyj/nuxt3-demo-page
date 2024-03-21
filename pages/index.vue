@@ -45,7 +45,7 @@ const getApiData = async () => {
 // vite env
 console.log("ENV =====> ", process.env.ENV)
 console.log("WEB_URL =====> ", process.env.WEB_URL)
-console.log("process =====> ", process)
+console.log("process =====> ", process.env)
 </script>
 
 <template>
