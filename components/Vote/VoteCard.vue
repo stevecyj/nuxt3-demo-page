@@ -1,16 +1,19 @@
 <script setup>
 import VoteBtn from "./VoteBtn.vue"
+import { storeToRefs } from "pinia"
 
 const store = useVoteStore()
+const { voteData, isFetch } = storeToRefs(store)
+const { addVote } = store
 </script>
 <template>
-  <div class="card" v-for="vote in store.voteData" :key="vote.name">
+  <div class="card" v-for="vote in voteData" :key="vote.name">
     <div class="card_info">
       <img :src="vote.path" alt="vote.name" />
       <h1>{{ vote.name }}</h1>
     </div>
-    <VoteBtn @click="store.addVote(vote.name)">
-      {{ store.isFetch ? "投票中" : vote.count }}
+    <VoteBtn @click="addVote(vote.name)">
+      {{ isFetch ? "投票中" : vote.count }}
     </VoteBtn>
   </div>
 </template>
