@@ -2,7 +2,7 @@
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
 
-export default defineNuxtConfig({
+const config = {
   devtools: { enabled: true },
   app: {
     head: {
@@ -34,11 +34,7 @@ export default defineNuxtConfig({
       'process.env': process.env,
     },
     server: {
-      "proxy": {
-        '/openData': {
-          "target": 'https://vipmbr.cpc.com.tw/',
-          "changeOrigin": true,
-        },
+      proxy: {
       },
     },
   },
@@ -89,4 +85,16 @@ export default defineNuxtConfig({
       //"apiUrl": '',
     //}
   //},
-});
+}
+
+if(process.env.NODE_ENV === 'development') {
+  config.vite.server.proxy = {
+    '/openData': {
+      "target": 'https://vipmbr.cpc.com.tw/',
+      "changeOrigin": true,
+    },
+  }
+  console.log('proxy =====> ', config.vite.server.proxy)
+}
+
+export default defineNuxtConfig(config);
