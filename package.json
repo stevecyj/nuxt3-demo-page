@@ -8,7 +8,8 @@
     "dev": "npm run theme && nuxt dev --open",
     "generate": "npm run theme && nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lang": "node ./tools/lang/GoogleSheetToJson.mjs"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
