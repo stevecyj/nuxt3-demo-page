@@ -66,7 +66,7 @@ const config = {
   imports: {
     dirs: ["stores"],
   },
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt","@nuxtjs/i18n"],
   alias: {
     "@theme": "../${theme}",
     "@helpers": "../helpers",
@@ -78,6 +78,28 @@ const config = {
       key: './https/localhost+3-key.pem',
       cert: './https/localhost+3.pem'
     }
+  },
+  i18n: {
+    strategy: "no_prefix",
+    locales: [
+      {
+        code: "zh-TW",
+        files: ['zh-TW.json']
+      },
+      {
+        code: "en-US",
+        files: ['en-US.json']
+      },
+      {
+        code: "ja-JP",
+        files: ['ja-JP.json']
+      },
+    ],
+    langDir: "language",
+    defaultLocale: "zh-TW",
+    detectbrowserlanguage: {
+      useCookie: true,
+    },
   },
   //"runtimeConfig": {
     //"token": '',
