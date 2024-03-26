@@ -27,5 +27,8 @@
   "i18n-ally.localesPaths": [
     "language",
     "tools/lang"
-  ]
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.displayLanguage": "zh-TW",
+  "i18n-ally.sourceLanguage": "zh-TW",
 }

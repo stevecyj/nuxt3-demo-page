@@ -77,6 +77,29 @@ onMounted(async () => {
       <NuxtLink class="mr-5 text-blue-500" to="/vote">vote</NuxtLink>
       <NuxtLink class="mr-5 text-blue-500" to="/gsap">gsap</NuxtLink>
     </div>
+    <div>
+      <h1>i18n</h1>
+      <div>
+        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+          $t("front_page")
+        }}</NuxtLink>
+        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+          $t("about_us")
+        }}</NuxtLink>
+        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+          $t("contact_us")
+        }}</NuxtLink>
+        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+          $t("product_description")
+        }}</NuxtLink>
+        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+          $t("latest_news")
+        }}</NuxtLink>
+        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+          $t("history")
+        }}</NuxtLink>
+      </div>
+    </div>
     <h1>首頁: {{ store.count }}</h1>
     <div class="w-6/12" v-if="pending">Loading ...</div>
     <div v-else-if="error" class="text-red-300">{{ error.message }}</div>
