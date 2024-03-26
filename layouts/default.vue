@@ -42,7 +42,11 @@ nuxtApp.hook("page:finish", () => {
 })
 
 // i18n
-const { locale } = useI18n()
+const { locale, setLocaleCookie } = useI18n()
+watch(locale, (val) => {
+  console.log("locale: ", val)
+  setLocaleCookie(val)
+})
 </script>
 
 <template>
@@ -63,7 +67,7 @@ const { locale } = useI18n()
         class="text-black/70 bg-white px-3 py-2 transition-all cursor-pointer hover:border-blue-600/30 border border-gray-200 rounded-lg outline-blue-600/50 appearance-none invalid:text-black/30 w-64"
       >
         <option value="" disabled selected>切換語系</option>
-        <option value="zh-US">英</option>
+        <option value="en-US">英</option>
         <option value="ja-JP">日</option>
         <option value="zh-TW">中</option>
       </select>
