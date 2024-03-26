@@ -100,6 +100,9 @@ const config = {
     detectbrowserlanguage: {
       useCookie: true,
     },
+    compilation: {
+      strictMessage: false,
+    },
   },
   //"runtimeConfig": {
     //"token": '',
