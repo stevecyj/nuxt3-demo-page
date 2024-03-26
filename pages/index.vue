@@ -83,7 +83,7 @@ onMounted(async () => {
         <NuxtLink class="mr-5 text-blue-400" to="/">{{
           $t("front_page")
         }}</NuxtLink>
-        <NuxtLink class="mr-5 text-blue-400" to="/">{{
+        <NuxtLink class="mr-5 text-blue-400" to="/about">{{
           $t("about_us")
         }}</NuxtLink>
         <NuxtLink class="mr-5 text-blue-400" to="/">{{

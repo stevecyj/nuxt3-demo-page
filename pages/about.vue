@@ -6,6 +6,9 @@ import AboutFooter from "@/components/About/Footer.vue"
 <template>
   <AboutHeader />
   <h1>about</h1>
+  <div class="about">
+    <div v-html="$t('about_content')"></div>
+  </div>
 
   <NuxtLink class="px-5" to="/about">about index</NuxtLink>
   <NuxtLink class="px-5" to="/about/a">about A</NuxtLink>
