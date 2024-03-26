@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
+import type { Strategies } from '@nuxtjs/i18n'
 
 const config = {
   devtools: { enabled: true },
@@ -40,7 +41,7 @@ const config = {
   },
   vue: {
     compilerOptions: {
-      isCustomElement: (tag) => ['h1'].some(substring => tag.includes(substring)),
+      isCustomElement: (tag: string) => ['h1'].some(substring => tag.includes(substring)),
     },
   },
 
@@ -80,7 +81,7 @@ const config = {
     }
   },
   i18n: {
-    strategy: "no_prefix",
+    strategy: "no_prefix" as Strategies,
     locales: [
       {
         code: "zh-TW",
