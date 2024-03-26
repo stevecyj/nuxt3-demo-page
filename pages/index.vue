@@ -47,7 +47,7 @@ console.log("ENV =====> ", process.env.ENV)
 console.log("WEB_URL =====> ", process.env.WEB_URL)
 // console.log("process =====> ", process.env)
 
-// 加油站
+// 加油站 openData
 onMounted(async () => {
   const response = await $fetch("/openData/5typeservicestn")
   console.log("加油站 =====> ", response)
